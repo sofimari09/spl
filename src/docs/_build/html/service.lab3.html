@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>service.lab3 package &#8212; spl 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="service-lab3-package">
+<h1>service.lab3 package<a class="headerlink" href="#service-lab3-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-service.lab3.ascii_art_generator_service">
+<span id="service-lab3-ascii-art-generator-service-module"></span><h2>service.lab3.ascii_art_generator_service module<a class="headerlink" href="#module-service.lab3.ascii_art_generator_service" title="Link to this heading">¶</a></h2>
+<p>LinkedIn User Service Module</p>
+<p>This module provides methods for retrieving personal profiles and posts from
+LinkedIn. It includes two classes:</p>
+<ol class="arabic">
+<li><dl>
+<dt><cite>UserService</cite>:</dt><dd><ul class="simple">
+<li><p><cite>get_personal_profile(linkedin_url: str) -&gt; dict</cite>: Fetches and returns</p></li>
+</ul>
+<p>personal profile data from LinkedIn.
+- <cite>get_profiles_posts(linkedin_url: str) -&gt; dict</cite>: Fetches and returns</p>
+<blockquote>
+<div><p>posts data from LinkedIn.</p>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><cite>DisplayInTableService</cite>:</dt><dd><ul class="simple">
+<li><p><cite>display_personal_profile(json_data: str) -&gt; str</cite>: Displays personal</p></li>
+</ul>
+<p>profile data in a table format.
+- <cite>display_profiles_posts(json_data: str, result=””) -&gt; str</cite>:
+Displays posts data in a table format.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Usage:
+1. Import the module: <cite>import service.lab7.user_service</cite>
+2. Use the classes and methods for fetching and displaying LinkedIn data.</p>
+<p>Note: Ensure the required libraries (<cite>requests</cite>, <cite>prettytable</cite>, <cite>regex</cite>)
+are installed before using this module.
+You can install them using: <cite>pip install requests prettytable regex</cite></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="service.lab3.ascii_art_generator_service.AsciiArtGeneratorService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">service.lab3.ascii_art_generator_service.</span></span><span class="sig-name descname"><span class="pre">AsciiArtGeneratorService</span></span><a class="headerlink" href="#service.lab3.ascii_art_generator_service.AsciiArtGeneratorService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides a service for generating and displaying ASCII art.</p>
+<p>Attributes:
+- __file_processor (FileProcessor): An instance of FileProcessor for file processing.</p>
+<p>Methods:
+- __init__.py(self): Initializes an AsciiArtGeneratorService object.
+- __get_text(self, text, font, color_position, width) -&gt; str: Generates
+formatted ASCII art text.
+- display_text(self): Takes user input to generate and display ASCII art,</p>
+<blockquote>
+<div><p>and writes it to a file.</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="service.lab3.ascii_art_generator_service.AsciiArtGeneratorService.display_text">
+<span class="sig-name descname"><span class="pre">display_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service.lab3.ascii_art_generator_service.AsciiArtGeneratorService.display_text" title="Link to this definition">¶</a></dt>
+<dd><p>Takes user input to generate and display ASCII art, and writes it to a file.</p>
+<p>Raises:
+- ValueError: If input cannot be parsed into an integer.
+- KeyError: If an incorrect value is entered for the key of fonts or color.
+- pyfiglet.CharNotPrinted: If a character is not printable in ASCII art.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-service.lab3">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-service.lab3" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">spl</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Vitalii.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/service.lab3.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

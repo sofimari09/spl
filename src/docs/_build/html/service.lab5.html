@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>service.lab5 package &#8212; spl 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="service-lab5-package">
+<h1>service.lab5 package<a class="headerlink" href="#service-lab5-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-service.lab5.figures_service">
+<span id="service-lab5-figures-service-module"></span><h2>service.lab5.figures_service module<a class="headerlink" href="#module-service.lab5.figures_service" title="Link to this heading">¶</a></h2>
+<p>Figures Service Module</p>
+<p>This module provides a service for working with 3D figures. It includes two classes:</p>
+<ul>
+<li><p><cite>Figure3D</cite> (abstract class):
+- Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>_character (str)</cite>: The character representing the figure.</p></li>
+<li><p><cite>_color_position (int)</cite>: The position of the color to be</p></li>
+</ul>
+<p>applied to the figure.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Methods:
+- <cite>__init__.py(self, character: str, color_position: int)</cite>:
+Initializes a Figure3D object.
+- <cite>get_2d_representation(self) -&gt; list</cite>: Abstract method
+to get the 2D representation of the figure.
+- <cite>get_3d_representation(self) -&gt; str</cite>: Abstract method
+to get the 3D representation of the figure.
+- <cite>is_appropriate_character(character: str) -&gt; bool</cite>:
+Static method to check if the character is appropriate.</p></li>
+</ul>
+</li>
+<li><p><cite>Cube</cite> (inherits from <cite>Figure3D</cite>):
+- Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>__length (int)</cite>: The length of the cube.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Methods:
+- <cite>__init__.py(self, length: int, character: str, color_position: int)</cite>:
+Initializes a Cube object.
+- <cite>get_2d_representation(self) -&gt; list</cite>: Gets the 2D representation
+of the cube.
+- <cite>get_3d_representation(self, scale: float = 1.0) -&gt; str</cite>: Gets the
+3D representation of the cube.</p></li>
+</ul>
+</li>
+</ul>
+<p>Usage:
+1. Import the module: <cite>import service.lab5.figures_service</cite>
+2. Create an instance of <cite>Cube</cite> or a custom class that inherits from <cite>Figure3D</cite>.
+3. Use the provided methods to work with 3D figures.</p>
+<p>Note: Ensure the required libraries (<cite>colorama</cite>) are installed
+before using this module.
+You can install it using: <cite>pip install colorama</cite></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="service.lab5.figures_service.Cube">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">service.lab5.figures_service.</span></span><span class="sig-name descname"><span class="pre">Cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">character</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service.lab5.figures_service.Cube" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#service.lab5.figures_service.Figure3D" title="service.lab5.figures_service.Figure3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">Figure3D</span></code></a></p>
+<p>Represents a 3D cube.</p>
+<p>Attributes:
+- __length (int): The length of the cube.
+- __offset (int): The offset for cube representation.</p>
+<p>Methods:
+- __init__.py(self, length: int, character: str, color_position: int): Initializes a Cube object.
+- get_2d_representation(self) -&gt; list: Gets the 2D representation of the cube.
+- get_3d_representation(self, scale: float = 1.0) -&gt; str:</p>
+<blockquote>
+<div><p>Gets the 3D representation of the cube.</p>
+</div></blockquote>
+<p>Example:
+&gt;&gt;&gt; cube = Cube(3, “*”, 1)
+&gt;&gt;&gt; cube.get_3d_representation()
+‘3D representation of the cube with color applied.’</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="service.lab5.figures_service.Cube.get_2d_representation">
+<span class="sig-name descname"><span class="pre">get_2d_representation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#service.lab5.figures_service.Cube.get_2d_representation" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the 2D representation of the cube.</p>
+<p>Returns:
+- list: A list of 2D representations of the cube.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="service.lab5.figures_service.Cube.get_3d_representation">
+<span class="sig-name descname"><span class="pre">get_3d_representation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#service.lab5.figures_service.Cube.get_3d_representation" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the 3D representation of the cube.</p>
+<p>Parameters:
+- scale (float): The scaling factor for the cube representation.</p>
+<p>Returns:
+- str: The 3D representation of the cube with color applied.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="service.lab5.figures_service.Figure3D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">service.lab5.figures_service.</span></span><span class="sig-name descname"><span class="pre">Figure3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">character</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service.lab5.figures_service.Figure3D" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>An abstract class for 3D figures.</p>
+<p>Attributes:
+- _character (str): The character representing the figure.
+- _color_position (int): The position of the color to be applied to the figure.</p>
+<p>Methods:
+- __init__.py(self, character: str, color_position: int): Initializes
+a Figure3D object.
+- get_2d_representation(self) -&gt; list: Abstract method to get the 2D
+representation of the figure.
+- get_3d_representation(self) -&gt; str: Abstract method to get the 3D
+representation of the figure.
+- is_appropriate_character(character: str) -&gt; bool: Static
+method to check if the character is appropriate.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="service.lab5.figures_service.Figure3D.get_2d_representation">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_2d_representation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#service.lab5.figures_service.Figure3D.get_2d_representation" title="Link to this definition">¶</a></dt>
+<dd><p>Abstract method to get the 2D representation of the figure.</p>
+<p>Returns:
+- list: A list containing the 2D representation of the figure.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="service.lab5.figures_service.Figure3D.get_3d_representation">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_3d_representation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#service.lab5.figures_service.Figure3D.get_3d_representation" title="Link to this definition">¶</a></dt>
+<dd><p>Abstract method to get the 3D representation of the figure.</p>
+<p>Returns:
+- str: The 3D representation of the figure.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="service.lab5.figures_service.Figure3D.is_appropriate_character">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_appropriate_character</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">character</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#service.lab5.figures_service.Figure3D.is_appropriate_character" title="Link to this definition">¶</a></dt>
+<dd><p>Static method to check if the character is appropriate.</p>
+<p>Parameters:
+- character (str): The character to be checked.</p>
+<p>Returns:
+- bool: True if the character is appropriate, False otherwise.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-service.lab5">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-service.lab5" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">spl</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Vitalii.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/service.lab5.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

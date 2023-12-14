@@ -1,0 +1,15 @@
+"""
+This file contains paths to files and directories.
+"""
+ASCII_ART_GENERATOR = "./data/lab3/output.txt"
+ASCII_ART_GENERATOR_OUTPUT = "./data/lab4/output.txt"
+OWN_ASCII_ART_GENERATOR_OUTPUT_FONT = "./data/lab4/fori.txt"
+JSON_FILE_PATH = "./data/lab4/result.json"
+FIGURE_2D = "./data/lab5/2d.txt"
+FIGURE_3D = "./data/lab5/3d.txt"
+DIFFERENCE_IN_YEARS_HISTOGRAM = "./data/lab8/difference-in-years-histogram.png"
+SEX_PIE_CHART_PHOTO = "./data/lab8/sex-pie-chart.png"
+JOB_BAR_CHART_PHOTO = "./data/lab8/job-bar-chart.png"
+COMBINED_DIAGRAM_PHOTO = "./data/lab8/combined-diagram.png"
+USERS_DATA = "./data/lab9/users.csv"
+HTML_DATA = "./docs/_build/html/"  # path to html files from src

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>service.lab2 package &#8212; spl 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="service-lab2-package">
+<h1>service.lab2 package<a class="headerlink" href="#service-lab2-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-service.lab2.calculator_service">
+<span id="service-lab2-calculator-service-module"></span><h2>service.lab2.calculator_service module<a class="headerlink" href="#module-service.lab2.calculator_service" title="Link to this heading">¶</a></h2>
+<p>Calculator Service Module</p>
+<p>This module defines the <cite>CalculatorService</cite> class representing a
+calculator service with basic arithmetic operations.</p>
+<p>Attributes:
+- __first_value (float): The first operand for the arithmetic operation.
+- __operator (str): The operator indicating the type of arithmetic operation.
+- __second_value (float): The second operand for the arithmetic operation.</p>
+<p>Methods:
+- __init__.py(self): Initializes a CalculatorService object with default values.
+- input_values(self): Takes input for the first value, operator, and second
+value from the user.
+- __is_operator_correct(self, operator): Checks if the provided operator is a
+valid arithmetic operator.
+- calculate(self): Performs the arithmetic operation based on the provided
+values and operator.
+- __str__(self): Returns a string representation of the CalculatorService object.</p>
+<p>Example:
+<a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
+calc_service = CalculatorService()
+calc_service.input_values()
+# Enter the first value: 5
+# Enter the operator [‘+’, ‘-’, ‘*’, ‘/’, ‘**’, ‘√’, ‘%’]: +
+# Enter the second value: 3
+result = calc_service.calculate()
+print(result)
+# Output: 8.0
+print(calc_service)
+# Output: CalculatorService: first_value=5.0, operator=+, second_value=3.0</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="service.lab2.calculator_service.CalculatorService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">service.lab2.calculator_service.</span></span><span class="sig-name descname"><span class="pre">CalculatorService</span></span><a class="headerlink" href="#service.lab2.calculator_service.CalculatorService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a calculator service with basic arithmetic operations.</p>
+<p>Attributes:
+- __first_value (float): The first operand for the arithmetic operation.
+- __operator (str): The operator indicating the type of arithmetic operation.
+- __second_value (float): The second operand for the arithmetic operation.</p>
+<p>Methods:
+- __init__.py(self): Initializes a CalculatorService object with default values.
+- input_values(self): Takes input for the first value, operator, and second value from the user.
+- __is_operator_correct(self, operator): Checks if the provided operator
+is a valid arithmetic operator.
+- calculate(self): Performs the arithmetic operation based on the provided values and operator.
+- __str__(self): Returns a string representation of the CalculatorService object.</p>
+<p>Example:
+&gt;&gt;&gt; calc_service = CalculatorService()
+&gt;&gt;&gt; calc_service.input_values()
+Enter the first value: 5
+Enter the operator [‘+’, ‘-’, ‘*’, ‘/’, ‘**’, ‘√’, ‘%’]: +
+Enter the second value: 3
+&gt;&gt;&gt; result = calc_service.calculate()
+&gt;&gt;&gt; print(result)
+8.0
+&gt;&gt;&gt; print(calc_service)
+CalculatorService: first_value=5.0, operator=+, second_value=3.0</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="service.lab2.calculator_service.CalculatorService.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service.lab2.calculator_service.CalculatorService.calculate" title="Link to this definition">¶</a></dt>
+<dd><p>Performs the arithmetic operation based on the provided values and operator.</p>
+<p>Raises:
+- ZeroDivisionError: If attempting to divide by zero.
+- ArithmeticError: If calculating the square root of a negative number.</p>
+<p>Returns:
+- float: The result of the arithmetic operation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="service.lab2.calculator_service.CalculatorService.input_values">
+<span class="sig-name descname"><span class="pre">input_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service.lab2.calculator_service.CalculatorService.input_values" title="Link to this definition">¶</a></dt>
+<dd><p>Takes input for the first value, operator, and second value from the user.</p>
+<p>Raises:
+- ValueError: If the input format for the number is invalid.
+- RuntimeWarning: If the input operator is incorrect.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-service.lab2">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-service.lab2" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">spl</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Vitalii.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/service.lab2.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
